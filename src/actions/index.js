@@ -3,7 +3,7 @@
 
 export const ADD_FEATURE = 'ADD_FEATURE'
 
-export function addFeature(add) {
+export function addItem(add) {
     console.log(add);
     return {
         type: ADD_FEATURE,
@@ -15,7 +15,7 @@ export function addFeature(add) {
 
 export const REMOVE_FEATURE = 'REMOVE_FEATURE'
 
-export function removeFeature(remove) {
+export function removeItem(remove) {
     console.log(remove);
     return {
         type: REMOVE_FEATURE,

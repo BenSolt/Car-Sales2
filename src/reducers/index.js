@@ -21,16 +21,16 @@ const initialState = {
         case "ADD_FEATURE":
                 return {
                     ...state,
-                    additionalPrice:,
-                    car:'',
-                    additionalFeatures:''
+                    additionalPrice: (state.additionalPrice += action.payload.price),
+                    car:{},
+                    additionalFeatures:[]
                     };
 
          case "REMOVE_FEATURE":
                 return {
                      ...state,
-                    additionalPrice:'',
-                    car:'',
-                    additionalFeatures:''
+                    additionalPrice:(state.additionalPrice -= action.payload.price),
+                    car:{},
+                    additionalFeatures:[]
                     };             
 }

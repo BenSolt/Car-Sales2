@@ -5,7 +5,11 @@ import AddedFeatures from './components/AddedFeatures';
 import AdditionalFeatures from './components/AdditionalFeatures';
 import Total from './components/Total';
 
-const App = () => {
+//my imports
+import {addItem, removeItem} from './actions';
+import { connect } from 'react-redux';
+
+const App = ({state}) => {
   // const state = {
   //   additionalPrice: 0,
   //   car: {
@@ -25,10 +29,14 @@ const App = () => {
 
   const removeFeature = item => {
     // dispatch an action here to remove an item
+    console.log('remove')
+    removeItem(item)
   };
 
   const buyItem = item => {
     // dipsatch an action here to add an item
+    console.log('add')
+    addItem(item)
   };
 
   return (
@@ -45,4 +53,13 @@ const App = () => {
   );
 };
 
-export default App;
+const mapStatetoProps = state => {
+console.log('mSTP app', state);
+return{
+state:state
+ };
+}
+export default connect(
+  mapStatetoProps,
+  {}
+) (App);
