@@ -6,8 +6,9 @@ import AdditionalFeatures from './components/AdditionalFeatures';
 import Total from './components/Total';
 
 //my imports
-import {addItem, removeItem} from './actions';
 import { connect } from 'react-redux';
+//import actions
+import {addItem, removeItem} from './actions';
 
 const App = ({state}) => {
   // const state = {
